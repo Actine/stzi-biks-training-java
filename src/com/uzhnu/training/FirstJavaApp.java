@@ -52,10 +52,11 @@ public class FirstJavaApp {
         String age = scanner.nextLine();
 
         // Виведемо привітання:
-        String hello = "Привіт, " + name + ", якому " + age + " років!";
+        String hello = "Привіт, " + name + ", якому " + age + " років.";
         System.out.println(hello);
 
-        // -----------------------------
         // Рекомендую пролистати: http://learnxinyminutes.com/docs/ru-ru/java-ru/
+
+        System.out.println("До побачення!");
     }
 }
