@@ -56,7 +56,5 @@ public class FirstJavaApp {
         System.out.println(hello);
 
         // Рекомендую пролистати: http://learnxinyminutes.com/docs/ru-ru/java-ru/
-
-        System.out.println("До побачення!");
     }
 }
