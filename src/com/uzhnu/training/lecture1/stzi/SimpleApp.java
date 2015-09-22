@@ -1,4 +1,4 @@
-package com.uzhnu.training.lecture1;
+package com.uzhnu.training.lecture1.stzi;
 
 /**
  * Created by Actine on 16.09.2015.

@@ -1,4 +1,4 @@
-package com.uzhnu.training.lecture2;
+package com.uzhnu.training.lecture1.biks;
 
 /**
  * Code for lecture 2
