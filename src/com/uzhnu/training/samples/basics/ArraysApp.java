@@ -32,6 +32,8 @@ public class ArraysApp {
 
         System.out.println(names[0] + ", " + names[1] + " і " + names[2]);     // "Павло, Тарас і Володимир"
 
+//      System.out.println(names[3]);           // програма рухне з помилкою - індекс 3 виліз за межі масиву (0, 1, 2)
+
         // Перше ж питання: чому індекси починаються з нуля?
         // Відповідь: так склалося історично, що елементи масиву ідентифікуються не за їхнім порядковим номером,
         // а за ЗСУВОМ від початку масиву.
@@ -90,6 +92,9 @@ public class ArraysApp {
         System.out.println(diceNumbers[4]);      // 5
         System.out.println(diceNumbers[5]);      // 6
 
+        // Або навіть ще простіше - без new <тип>[] (хоча цей спосіб використовують рідко)
+        int[] secondDieNumbers = {1, 2, 3, 4, 5, 6};
+
         // Коли створюється масив із примітивів, кожен елемент масиву заповнюється початковим значенням даного типу.
         // Для чисел це 0, для булінів - false, для літер (char) - нульовий символ.
         myLongs = new long[3];
@@ -141,6 +146,9 @@ public class ArraysApp {
         smallMatrix[0] = new int[]{1, 2};
         smallMatrix[1] = new int[]{5, 1};
 
+        // Або простіше:
+        int[][] anotherMatrix = {{1, 2}, {5, 1}};
+
         // Порахуємо визначник цієї матриці ^_^
         int determinant = smallMatrix[0][0] * smallMatrix[1][1] - smallMatrix[0][1] * smallMatrix[1][0];
         System.out.println(determinant);
@@ -151,7 +159,8 @@ public class ArraysApp {
         System.out.println(determinant);
 
         // Тому старайтеся спрощувати і обходитись одновимірними масивами.
-        // Поки що у мене все.
+
+        // Поки що все, згодом цей лістинг буде доповнено.
 
     }
 
