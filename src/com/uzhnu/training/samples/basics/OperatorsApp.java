@@ -50,7 +50,7 @@ public class OperatorsApp {
                                             // ...
 
         // Унарні операції (один операнд)
-        // Їх є чотири, і вони працюють лише для числових змінних (і цілих, і дробних теж)
+        // Їх є чотири, вони працюють лише для числових змінних (і цілих, і дробних теж) і одразу змінюють їх
         int i = 0;
         System.out.println(i++);            // 0 - Повернути нинішнє значення i, тоді збільшити його на 1
         System.out.println(i--);            // 1 - Повернути нинішнє значення i, тоді зменшити його на 1
@@ -65,7 +65,7 @@ public class OperatorsApp {
 
         // -------------------------------------------------------------------------------------------------------------
 
-        // Багато широко вживаних математичних операцій знаходяться в УТИЛІТНОМУ класі Math:
+        // Багато широковживаних математичних операцій знаходяться в УТИЛІТНОМУ класі Math:
         System.out.println(Math.sin(Math.PI / 6));     // pi/6 = 30°, sin(30°) = 0.5
         System.out.println(Math.sqrt(16));             // 4.0 - квадратний корінь
         System.out.println(Math.pow(2, 8));            // 2^8 = 256.0 - піднесення до степеня
@@ -138,11 +138,33 @@ public class OperatorsApp {
 
         // 3. Логічні операції
         // Здійснюються над булінами (логічними «так» (true) і «ні» (false))
+        boolean x = true;
+        boolean y = false;
+
         result = !result;           // Заперечення: «так» стає «ні», «ні» стає «так»
-        result = true && false;     // Кон’юнкція (операція І): результат буде «так» тільки якщо обидва операнди «так»
-        result = true || false;     // Диз’юнкція (операція АБО): результат буде «ні» тільки якщо обидва операнди «ні»
-        result = true ^ false;      // Виключна диз’юнкція (ВИКЛЮЧНЕ АБО), логічне додавання:
-                                    // результат буде «так» лише якщо один із операндів «так»
+        System.out.println(!false);            // true;
+        System.out.println(!true);             // false;
+
+        result = x && y;            // Кон’юнкція (операція І):
+                                    // результат буде true тільки якщо І перший, І другий операнди будуть true:
+        System.out.println(false && false);    // false;
+        System.out.println(false && true);     // false;
+        System.out.println(true  && false);    // false;
+        System.out.println(true  && true);     // true;
+
+        result = x || y;            // Диз’юнкція (операція АБО):
+                                    // результат буде true якщо перший АБО другий (АБО обидва) операнди будуть true:
+        System.out.println(false || false);    // false;
+        System.out.println(false || true);     // true;
+        System.out.println(true  || false);    // true;
+        System.out.println(true  || true);     // true;
+
+        result = x ^ y;             // Виключна диз’юнкція (ВИКЛЮЧНЕ АБО), або логічне додавання:
+                                    // результат буде true лише якщо один із операндів true, але не обидва разом:
+        System.out.println(false ^ false);     // false;
+        System.out.println(false ^ true);      // true;
+        System.out.println(true  ^ false);     // true;
+        System.out.println(true  ^ true);      // false;
 
         // Логічні операції найкраще працюють тоді, коли треба перевіряти зразу кілька умов:..
         result = i > 5 && i < 10;   // true якщо змінна більше 5 І менше 10
