@@ -382,8 +382,8 @@ public class VariablesApp {
         long parsedLong = Long.parseLong("25000000000000");
         double parsedDouble = Double.parseDouble("10.625");
         boolean parsedBool = Boolean.parseBoolean("true");
-        boolean parsedBool2 = Boolean.parseBoolean("TrUe");   // теж true, не зважаючи на регістр
-        boolean parsedBool3 = Boolean.parseBoolean("YES");    // false
+        boolean parsedBool2 = Boolean.parseBoolean("TrUe");   // теж true, не зважаючи на суміш малих і великих літер
+        boolean parsedBool3 = Boolean.parseBoolean("YES");    // усе, що не true, вважатиметься за false
 
         // Якщо підсунути методу неправильний рядок (наприклад, parseInt("abracadabra")), програма вилетить із помилкою
 
@@ -403,6 +403,16 @@ public class VariablesApp {
         str = String.valueOf(123.456);
         str = String.valueOf(true);
         str = String.valueOf(someNull);        // навіть якщо аргумент - null (верне рядок "null")
+
+        // Для перетворення об’єктів на рядки, в усіх об’єктів є метод toString()
+
+        str = parsedInt2.toString();           // для класів-обгорток примітивів - поверне значення примітива
+        str = parsedDouble2.toString();
+        str = new Object().toString();         // для інших об’єктів - якесь їх рядкове представлення
+                                               // (за замовчуванням - назву класу і хеш-код об’єкта, унікальні для
+                                               // об’єктів із різними даними всередині)
+        str = "Навіть у мене є".toString();    // верне себе
+
 
         // -------------------------------------------------------------------------------------------------------------
 
