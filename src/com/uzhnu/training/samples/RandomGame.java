@@ -20,6 +20,7 @@ public class RandomGame {
 
         System.out.println("Я задумав число від 0 до 100, спробуйте відгадати його");
 
+        // Повторювати вічно. Вихід із програми закладений всередині циклу (return)
         while (true) {
             // Зчитати введений рядок із консолі і розпізнати в ньому ціле число
             response = Integer.parseInt(scanner.nextLine());
@@ -31,7 +32,9 @@ public class RandomGame {
             } else {
                 // Залишився тільки варіант, коли randomNumber == response
                 System.out.println("Ви відгадали!");
-                break;
+
+                // return - вийти із методу main, а відтак і з програми
+                return;
             }
         }
     }
