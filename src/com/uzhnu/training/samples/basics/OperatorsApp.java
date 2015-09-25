@@ -38,7 +38,7 @@ public class OperatorsApp {
         System.out.println(5f + 10f);               // float
         System.out.println(5f + 10d);               // double
 
-        // Іще одна бінарна математична операція - взяття за модулем
+        // Іще одна бінарна математична операція - взяття за модулем (не плутати з модулем числа)
         // Вона повертає остачу від ділення націло:
         System.out.println(0 % 4);          // 0
         System.out.println(1 % 4);          // 1
