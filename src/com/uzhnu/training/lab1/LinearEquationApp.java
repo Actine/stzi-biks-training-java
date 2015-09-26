@@ -30,17 +30,6 @@ public class LinearEquationApp {
 
         System.out.println(-b / a);
 
-
-        // -----------------------------------------
-
-
-        double d = b*b - 4*a*c;
-
-        Math.sqrt(d);
-
-
-
-
     }
 
 }

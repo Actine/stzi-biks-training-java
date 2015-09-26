@@ -8,7 +8,7 @@ import java.util.Scanner;
  * @author Paul Danyliuk
  * @date 11:13 @ 24.09.2015.
  */
-public class Suma {
+public class SumApp {
 
     public static void main(String[] args) {
 
