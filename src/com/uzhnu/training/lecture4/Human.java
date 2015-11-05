@@ -6,7 +6,7 @@ package com.uzhnu.training.lecture4;
  * @author Paul Danyliuk
  * @date 15:48 @ 28.10.2015.
  */
-public class Human {
+public abstract class Human {
 
     protected int age;
     protected String name;
@@ -15,7 +15,7 @@ public class Human {
         this.age = age;
     }
 
-    public String getName() {
+    final public String getName() {
         return name;
     }
 
@@ -26,6 +26,11 @@ public class Human {
     public void setName(String name) {
         verifyNotEmpty(name, "Ім’я");
         this.name = name;
+    }
+
+    public void setName(String firstName, String lastName) {
+        verifyNotEmpty(name, "Ім’я");
+        this.name = firstName + " " + lastName;
     }
 
     protected void verifyNotEmpty(String name, String verifyingWhat) {

@@ -6,7 +6,7 @@ package com.uzhnu.training.lecture4;
  * @author Paul Danyliuk
  * @date 16:30 @ 28.10.2015.
  */
-public class Student extends Human {
+public class Student extends Human implements HasStudentPass, UniversityMember {
 
     private String university;
     private boolean drunk;
@@ -15,6 +15,11 @@ public class Student extends Human {
     public Student(int studentNumber) {
         super(17);
         super.setName("Student #" + studentNumber);
+    }
+
+    @Override
+    public String getUniversityName() {
+        return "UzhNU";
     }
 
     public String getUniversity() {
@@ -50,5 +55,10 @@ public class Student extends Human {
                 ", name=" + getName() +
                 ", age=" + age +
                 '}';
+    }
+
+    @Override
+    public int getStudentPassNumber() {
+        return 123456;
     }
 }
