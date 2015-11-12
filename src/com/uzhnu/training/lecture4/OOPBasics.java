@@ -21,6 +21,8 @@ public class OOPBasics {
 
         Human human = new Student(10);
         human.setName("Paul");
+//        human.setGender(Gender.valueOf("male"));
+//        System.out.println(human.getGender().value);
 
         Human human2 = new Professor(18);
         human2.setName("Alex");
@@ -55,6 +57,11 @@ public class OOPBasics {
 
         System.out.println("Student has passport: " + (student instanceof HasPassport));
         System.out.println("Student has student pass: " + (student instanceof HasStudentPass));
+
+
+        String x = "abc";
+        System.out.println(x.toUpperCase());
+        System.out.println(x);
 
     }
 

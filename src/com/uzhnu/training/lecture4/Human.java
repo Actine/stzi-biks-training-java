@@ -10,6 +10,7 @@ public abstract class Human {
 
     protected int age;
     protected String name;
+    protected Gender gender;
 
     public Human(int age) {
         this.age = age;
@@ -29,8 +30,16 @@ public abstract class Human {
     }
 
     public void setName(String firstName, String lastName) {
-        verifyNotEmpty(name, "Ім’я");
+        verifyNotEmpty(firstName, "Ім’я");
         this.name = firstName + " " + lastName;
+    }
+
+    public Gender getGender() {
+        return gender;
+    }
+
+    public void setGender(Gender gender) {
+        this.gender = gender;
     }
 
     protected void verifyNotEmpty(String name, String verifyingWhat) {
@@ -39,4 +48,22 @@ public abstract class Human {
         }
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Human human = (Human) o;
+
+        if (age != human.age) return false;
+        return !(name != null ? !name.equals(human.name) : human.name != null);
+
+    }
+
+    @Override
+    public int hashCode() {
+        int result = age;
+        result = 31 * result + (name != null ? name.hashCode() : 0);
+        return result;
+    }
 }

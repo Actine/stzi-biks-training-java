@@ -6,9 +6,16 @@ package com.uzhnu.training.lab5;
  * @author Paul Danyliuk
  * @date 12:10 @ 03.11.2015.
  */
-public class Animal {
+abstract public class Animal {
+
+    public static final int FEEDING_COST_PER_MONTH_OF_AGE = 0;
 
     private boolean isHungry = true;
+    protected int age;
+
+    public Animal(int age) {
+        this.age = age;
+    }
 
     public boolean isHungry() {
         return this.isHungry;
@@ -17,5 +24,11 @@ public class Animal {
     public void feed() {
         this.isHungry = false;
     }
+
+    public int getFeedingPrice() {
+        return getFeedingConstant() * age;
+    }
+
+    abstract int getFeedingConstant();
 
 }
