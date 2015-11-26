@@ -12,6 +12,30 @@ public class CollectionsApp {
 
     public static void main(String[] args) {
 
+        String[] namesArray = {"Володимир", "Сергій", "Дмитро", "Володимир", "Іван"};
+
+        Set<String> strings = new TreeSet<>(Arrays.asList(namesArray));
+        strings.add("Павло");
+
+        for (String name : strings) {
+            System.out.println(name);
+        }
+
+        String[] backToArray = new String[strings.size()];
+        strings.toArray(backToArray);
+        for (String name : backToArray) {
+            System.out.println(name);
+        }
+
+//        int[] numbers = new int[]{1, 4, 8, 12, 10, 4, 2, 9};
+        Arrays.sort(namesArray);
+        System.out.println(Arrays.toString(namesArray));
+
+
+        System.exit(0);
+
+
+
         // Списки - List
         List<String> namesList = new ArrayList<>();
         namesList.add("Володимир");
@@ -24,7 +48,19 @@ public class CollectionsApp {
             System.out.println(namesList.get(i));
         }
 
-        System.out.println(namesList.contains(new String("Іван")));
+        List<String> filteredNames = new ArrayList<>();
+        for (String name : namesList) {
+            if (name.contains("о")) {
+                filteredNames.add(name);
+            }
+        }
+
+        Set<String> uniqueNames = new TreeSet<>(filteredNames);
+        for (String name : uniqueNames) {
+            System.out.println(name);
+        }
+
+//        System.out.println(namesList.contains(new String("Іван")));
 
         System.out.println("--------");
 
@@ -45,7 +81,8 @@ public class CollectionsApp {
         namesWithPhones.put("Сергій", 12346);
         namesWithPhones.put("Іван", 87345);
 
-        for (Map.Entry<String, Integer> entry : namesWithPhones.entrySet()) {
+        Set<Map.Entry<String, Integer>> entries = namesWithPhones.entrySet();
+        for (Map.Entry<String, Integer> entry : entries) {
             System.out.println(entry.getKey() + " - " + entry.getValue());
         }
 

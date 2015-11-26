@@ -1,6 +1,8 @@
 package com.uzhnu.training.lab5;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
 /**
  * Code for lecture ${LECTURE_NUMBER}
@@ -21,6 +23,14 @@ public class FarmAppWithArrayList {
         animals.add(new Cow(30));
         animals.add(new Hare(2));
         animals.add(new Goat(6));
+
+        Collections.sort(animals);
+
+        for (Animal animal : animals) {
+            System.out.println(animal);
+        }
+
+        System.exit(0);
 
         System.out.println(animals.size());
 
