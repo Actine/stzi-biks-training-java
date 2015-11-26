@@ -1,5 +1,7 @@
 package com.uzhnu.training.lab5;
 
+import java.util.Arrays;
+
 /**
  * Code for lecture ${LECTURE_NUMBER}
  *
@@ -17,6 +19,14 @@ public class FarmApp {
         animals[2] = new Cow(30);
         animals[3] = new Hare(2);
         animals[4] = new Goat(6);
+
+        Arrays.sort(animals);
+
+        System.out.println(Arrays.toString(animals));
+
+        System.exit(0);
+
+
         int animalCount = 5;
 
         for (int i = 0; i < animals.length; i++) {
