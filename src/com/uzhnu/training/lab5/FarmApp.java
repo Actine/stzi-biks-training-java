@@ -1,6 +1,7 @@
 package com.uzhnu.training.lab5;
 
 import java.util.Arrays;
+import java.util.Comparator;
 
 /**
  * Code for lecture ${LECTURE_NUMBER}
@@ -20,7 +21,12 @@ public class FarmApp {
         animals[3] = new Hare(2);
         animals[4] = new Goat(6);
 
-        Arrays.sort(animals);
+        Arrays.sort(animals, new Comparator<Animal>() {
+            @Override
+            public int compare(Animal o1, Animal o2) {
+                return o2.age - o1.age;
+            }
+        });
 
         System.out.println(Arrays.toString(animals));
 

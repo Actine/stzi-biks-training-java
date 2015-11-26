@@ -6,7 +6,7 @@ package com.uzhnu.training.lab5;
  * @author Paul Danyliuk
  * @date 12:10 @ 03.11.2015.
  */
-abstract public class Animal implements Comparable<Animal> {
+abstract public class Animal {
 
     public static final int FEEDING_COST_PER_MONTH_OF_AGE = 0;
 
@@ -30,11 +30,6 @@ abstract public class Animal implements Comparable<Animal> {
     }
 
     abstract int getFeedingConstant();
-
-    @Override
-    public int compareTo(Animal o) {
-        return this.age - o.age;
-    }
 
     @Override
     public String toString() {
