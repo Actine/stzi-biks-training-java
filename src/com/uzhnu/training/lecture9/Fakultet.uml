@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>com.uzhnu.training.lecture9.models.Fakultet</OriginalElement>
+  <nodes>
+    <node x="147.50000000000003" y="156.0">com.uzhnu.training.lecture9.models.Kafedra</node>
+    <node x="32.50000000000003" y="312.0">com.uzhnu.training.lecture9.models.ZapisUZalikoviy</node>
+    <node x="26.00000000000003" y="390.0">com.uzhnu.training.lecture9.models.StorinkaVZalikoviy</node>
+    <node x="111.37500000000003" y="468.0">com.uzhnu.training.lecture9.models.Zalikova</node>
+    <node x="94.00000000000003" y="234.0">com.uzhnu.training.lecture9.models.Vykladach</node>
+    <node x="0.0" y="234.0">com.uzhnu.training.lecture9.models.Predmet</node>
+    <node x="140.50000000000003" y="0.0">com.uzhnu.training.lecture9.models.Universitet</node>
+    <node x="196.00000000000003" y="234.0">com.uzhnu.training.lecture9.models.Student</node>
+    <node x="147.00000000000003" y="78.0">com.uzhnu.training.lecture9.models.Fakultet</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.uzhnu.training.lecture9.models.ZapisUZalikoviy" target="com.uzhnu.training.lecture9.models.Vykladach">
+      <point x="26.75" y="-14.0" />
+      <point x="112.75000000000003" y="287.0" />
+      <point x="135.00000000000003" y="287.0" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="com.uzhnu.training.lecture9.models.Zalikova" target="com.uzhnu.training.lecture9.models.StorinkaVZalikoviy">
+      <point x="-18.25" y="-14.0" />
+      <point x="129.62500000000003" y="443.0" />
+      <point x="86.00000000000003" y="443.0" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="com.uzhnu.training.lecture9.models.Student" target="com.uzhnu.training.lecture9.models.Kafedra">
+      <point x="0.0" y="-14.0" />
+      <point x="232.00000000000003" y="209.0" />
+      <point x="201.50000000000003" y="209.0" />
+      <point x="18.0" y="14.0" />
+    </edge>
+    <edge source="com.uzhnu.training.lecture9.models.Vykladach" target="com.uzhnu.training.lecture9.models.Kafedra">
+      <point x="0.0" y="-14.0" />
+      <point x="135.00000000000003" y="209.0" />
+      <point x="165.50000000000003" y="209.0" />
+      <point x="-18.0" y="14.0" />
+    </edge>
+    <edge source="com.uzhnu.training.lecture9.models.Fakultet" target="com.uzhnu.training.lecture9.models.Kafedra">
+      <point x="18.25" y="14.0" />
+      <point x="18.0" y="-14.0" />
+    </edge>
+    <edge source="com.uzhnu.training.lecture9.models.ZapisUZalikoviy" target="com.uzhnu.training.lecture9.models.Predmet">
+      <point x="-26.75" y="-14.0" />
+      <point x="59.25000000000003" y="287.0" />
+      <point x="37.0" y="287.0" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="com.uzhnu.training.lecture9.models.Kafedra" target="com.uzhnu.training.lecture9.models.Fakultet">
+      <point x="-18.0" y="-14.0" />
+      <point x="-18.25" y="14.0" />
+    </edge>
+    <edge source="com.uzhnu.training.lecture9.models.Universitet" target="com.uzhnu.training.lecture9.models.Fakultet">
+      <point x="21.5" y="14.0" />
+      <point x="205.00000000000003" y="53.0" />
+      <point x="201.75000000000003" y="53.0" />
+      <point x="18.25" y="-14.0" />
+    </edge>
+    <edge source="com.uzhnu.training.lecture9.models.StorinkaVZalikoviy" target="com.uzhnu.training.lecture9.models.ZapisUZalikoviy">
+      <point x="0.0" y="-14.0" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="com.uzhnu.training.lecture9.models.Zalikova" target="com.uzhnu.training.lecture9.models.Student">
+      <point x="18.25" y="-14.0" />
+      <point x="166.12500000000003" y="443.0" />
+      <point x="232.00000000000003" y="443.0" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="com.uzhnu.training.lecture9.models.Fakultet" target="com.uzhnu.training.lecture9.models.Universitet">
+      <point x="-18.25" y="-14.0" />
+      <point x="165.25000000000003" y="53.0" />
+      <point x="162.00000000000003" y="53.0" />
+      <point x="-21.5" y="14.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="137.5" y="247.0" />
+  <SelectedNodes />
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
